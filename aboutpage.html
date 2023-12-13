@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta charset="utf-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Garbage Time</title>
+    <link rel="stylesheet" href="aboutpage.css">
+    <script src="script2.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css?family=Waiting+for+the+Sunrise" rel="stylesheet" type="text/css"/>
+
+</head>
+
+<body>
+  <div id="typedtext"></div>
+
+
+    <script>// set up text to print, each item in array is new line
+        var aText = new Array(
+        "About:", 
+        "My website, 'Garbage Time', is about the history of K-pop and how it evolved during the last decade. The word garbage time means, in sports, the final moments or minutes of a game in which one side has an insurmountable lead. I chose this word for the title of my website because K-pop culture is comparably new to Western society, competing with the 'superior' American pop music genre. Also, some people still think listening to K-pop wastes time because it's loud, bang, cringy, and stupid: sarcasm. My website introduces how K-pop culture evolved from 2009 to 2023 and what events happened each year to make K-pop the way it is now. I created a simple-looking one-scroll webpage with typographical elements to illustrate the timeline and history. ",
+        "Why do people think listening to K-pop is stupid? When I first came to the States to study abroad in 2014, many friends asked me what music I listened to. I used to say I like K-pop because I'm from Korea and grew up listening to them. Then, people said, 'What's K-POP?' and 'Oh, I know what K-POP is; something like Gangnam Style, right? It's way too loud, and it has no meaning. Kinda dumb.' I was shocked by that response because it is better than people say. K-pop is a music genre. However, it is a multifaceted music genre involving hip-hop, R&B, dance, jazz, rock, and more. Even now, some K-pop songs have a new arrangement or transcription of a classical composition. For example, BlackPink's 'Shut Down' samples the beginning of the third movement of Italian composer Niccolò Paganini's second violin concerto, commonly known as 'La Campanella.' Although K-Pop became popular in the Western world compared to 10 years ago, I think that K-Pop is still underrated. There are so many more great songs. Through this website, I hope the viewers can learn more about the history of K-Pop and not think it's 'garbage time' to listen to this music genre. "
+        );
+        var iSpeed = 100; // time delay of print out
+        var iIndex = 0; // start printing array at this posision
+        var iArrLength = aText[0].length; // the length of the text array
+        var iScrollAt = 20; // start scrolling up at this many lines
+         
+        var iTextPos = 0; // initialise text position
+        var sContents = ''; // initialise contents variable
+        var iRow; // initialise current row
+         
+        function typewriter()
+        {
+         sContents =  ' ';
+         iRow = Math.max(0, iIndex-iScrollAt);
+         var destination = document.getElementById("typedtext");
+         
+         while ( iRow < iIndex ) {
+          sContents += aText[iRow++] + '<br />';
+         }
+         destination.innerHTML = sContents + aText[iIndex].substring(0, iTextPos) + "_";
+         if ( iTextPos++ == iArrLength ) {
+          iTextPos = 0;
+          iIndex++;
+          if ( iIndex != aText.length ) {
+           iArrLength = aText[iIndex].length;
+           setTimeout("typewriter()", 500);
+          }
+         } else {
+          setTimeout("typewriter()", iSpeed);
+         }
+        }
+        
+        
+        typewriter();</script>
+
+
+<p>
+
+  
+</p>
+
+</body>

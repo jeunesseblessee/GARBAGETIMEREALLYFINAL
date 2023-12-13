@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family:"HelveticaNeue-CondensedBold";
+    font-size: 100px;
+    color: black;
+    box-sizing: border-box;
+    text-align: center;
+    
+}
+
+body{
+    background:#F5F5F5;
+
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+}
+
+.grid-item {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.image-link {
+  display: block;
+}
+
+.image-item {
+  width: 60%;
+  height: auto;
+}
+
+.text-box {
+  margin-top: 1px;
+  color: black;
+  font-size: 35px;
+}
+

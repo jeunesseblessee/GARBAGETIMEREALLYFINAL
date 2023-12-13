@@ -1,0 +1,55 @@
+body{
+  margin: 0;
+  padding: 0;
+  background: #F5F5F5 !important;
+  color: transparent;
+  font-family: "HelveticaNeue-CondensedBold";
+  width: 100vw;
+  
+}
+* {
+  user-select: none;
+}
+.word {
+  position: absolute;
+  cursor: grab;
+  font-size: 50px;
+  color:black;
+}
+.word.highlighted {
+  font-weight: bold;
+  color: #0E4C92;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  display: block;
+  padding: 1rem;
+}
+
+
+.button-link button {
+  position: absolute;
+  display: flex;
+  text-align: left;
+  margin: auto 0;
+  border: 0;
+  margin: 20x;
+  color: Space Blue;
+  cursor: pointer;
+  font-family: "HelveticaNeue-CondensedBold";
+  font-size: 150px;
+  line-height: normal;
+  letter-spacing: -0.6px;
+  padding: 0;
+border: none;
+background: none;
+
+}
+
+
+
+.button-link button:hover {
+  color: gainsboro;
+}
